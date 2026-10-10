@@ -1,19 +1,18 @@
-import mysql.connector as connector
+import sqlite3
 
 class restaurent:
     cart=[]
     def __init__(self):
-        self.con = connector.connect(
-                    host="localhost",
-                    user="root",
-                    password="tiger",
-                    database="ordering_system"
-        )
+        self.connection=sqlite3.connect("order.db")
+        self.cursor = self.connection.cursor()
 
-        table=("""CREATE TABLE IF NOT EXISTS Orders(ELEMENTS VARCHAR(20),PRICE FLOAT)""")
-        cur=self.con.cursor()
-        cur.execute(table)
-        print("created")
+        self.cursor.execute("""
+            CREATE TABLE IF NOT EXISTS Orders(
+            ELEMENTS VARCHAR(20),
+            PRICE FLOAT
+            )
+            """)
+        self.connection.commit()
         self.menu_details()
        
     def menu(self):

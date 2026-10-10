@@ -1,0 +1,22 @@
+[
+    {
+        "Roll No": "1",
+        "Name": "palak",
+        "Course": "bca",
+        "Marks1": 98.0,
+        "Marks2": 99.0,
+        "Marks3": 78.0,
+        "Total": 275.0,
+        "Percentage": 91.67
+    },
+    {
+        "Roll No": "2",
+        "Name": "navya",
+        "Course": "ba",
+        "Marks1": 98.0,
+        "Marks2": 99.0,
+        "Marks3": 78.0,
+        "Total": 275.0,
+        "Percentage": 91.67
+    }
+]
